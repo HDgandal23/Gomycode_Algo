@@ -1,0 +1,94 @@
+
+// Premiere tache
+
+Programme lire_phrase;
+
+variables 
+
+  voyelles : tableau [6] caractere;
+  phrase : chaine;
+  nbrVoyelles, nbrMots, i : entier;
+  
+
+  Debut
+    Ecrire("Veuillez saisir une phrase qui se termine par un point svp : ");
+    Lire(phrase);
+
+    voyelles = ["a", "e", "i", "o", "u", "y"];
+
+    nbrVoyelles = 0;
+    nbrMots = 0;
+    i = 0;
+
+    Tantque ( phrase[i] <> "." )
+
+    // ici le signe " <> " signifie different de ...
+
+      pour i allant de 0 a 5 par pas 1 faire
+
+        si ( phrase[i] == voyelles[i] )
+
+          nbrVoyelles = nbrVoyelles + 1;
+
+        finsi;
+
+      finpour;
+
+      si ( phrase[i] == " " )
+
+        nbrMots = nbrMots + 1;
+
+      finsi;
+
+      i++;
+
+    FinTanque;
+
+    Ecrire("Le nombre de voyelles est : ", nbrVoyelles);
+    Ecrire("Le nombre de mots est : ", nbrMots + 1);
+
+  Fin.
+
+
+// Deuxieme Tache
+
+Programme comparaison;
+
+variables 
+
+    sum, i, j, k, I  : entier;
+    tab1 , tab2, tmp  : tableau [1..N] entier;
+
+  Debut
+
+    // Supposons que les deux tableaux tab1 et tab2 sont deja remplie..
+      I = 0;
+      k= 0;
+      pour i allant de 0 a N-1 par pas 1
+        pour j allant de 0 a N-1 par pas 1
+
+          si ( tab1[i] == tab2[j] )
+            k = 1;
+            break;
+          finsi;
+        Finpour;
+
+        si ( k == 0 )
+          tmp[I] = tab1[i];
+          I++;
+        finsi;
+
+      Finpour;
+
+      pour i allant 0 a I par pas 1 faire
+
+        sum = sum + tmp[i];
+
+      Finpour; 
+      
+      Ecrire("La somme est : ", sum);
+  
+  Fin.
+          
+
+    
