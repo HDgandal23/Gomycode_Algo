@@ -1,0 +1,58 @@
+# Second Checkpoint Programmation
+
+// Premiere Tache 
+Algo CalculVecteur;
+
+  Variables:
+    
+    v1, v2 : tableau[100] int;
+    i, produits, n : entier;
+
+  fonction Produit_scalaires(v1, v2):
+      si len(v1) != len(v2) alors 
+        Ecrire("Veuillez saisir des vecteurs de mm dimension !")
+      sinon
+        n = len(v1);
+        pour i allant de 0 a n - 1 par pas 1 faire
+            produits = produits + v1[i]*v2[i]; 
+        finpour;
+        return produits;
+      finsi 
+
+  Debut
+    // Soient les vecteurs suivants
+    vecteur_1 = [3,4,5];
+    vecteur_2 = [2,6,7];
+  
+    int resultat = Produit_scalaires(vecteur_1, vecteur_2);
+
+    si resultat == 0 alors
+      Ecrire("Les deux Vecteurs sont Orthogonaux");
+    sinon:
+      Ecrire("Les deux vecteurs ne sont pas Orthogonaux");
+  
+  Fin.
+
+// Deuxieme Tache
+
+Algo Tri_par_Insertion;
+
+  Variables:
+    tab : tableau[N] entier;
+    i, j, tmp : entier;
+
+  Debut
+    tmp = 0;
+
+    Pour i allant de 0 a N - 2 par 1 faire
+      pour j allant de i + 1 a N - 1 par pas 1 faire
+
+          tmp = tab[i];
+          tab[i] = tab[j];
+          tab[j] = tmp;
+
+      finpour;
+    finpour;
+
+  Fin.
+
